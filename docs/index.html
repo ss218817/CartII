@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Polish Migration within the European Union</title>
+    <style>
+html, body{
+    width:100%;
+    height:100%;
+    background-color: black;
+} 
+#viewDiv{
+    padding:0;
+    padding:0%;
+    left: 0;
+    margin: 0;
+    height:85%;
+    width:100%
+}
+    #viewDivMain {
+    float: left;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 50%;
+}
+#viewDivMaps {
+    float: left;
+    right: 0;
+    padding: 0.5%;
+    margin: 0;
+    height: 100%;
+    width: 24.5%;
+}
+
+#titleDiv{
+    float: right;
+    height: 25px;
+    width: 99.5%;
+    background-color:black;
+    color:white;
+    text-align: right;
+    padding-right: 0%;
+    font-weight: 400;
+    font-size: 25px
+}
+#titleDiv1{
+    float: top;
+    height: 25px;
+    width: 95.5%;
+    background-color:black;
+    color:white;
+    text-align: right;
+    padding-right: 0.5%;
+    font-weight: 400;
+    font-size: 20px
+}
+#titleDiv2{
+    float: bottom;
+    height: 25px;
+    width: 95.5%;
+    background-color:black;
+    color:white;
+    text-align: right;
+    padding-right: 0.5%;
+    font-weight: 400;
+    font-size: 20px
+}
+#titleDiv3{
+    float: left;
+    height: 25px;
+    width: 25.5%;
+    background-color:black;
+    color:white;
+    text-align: right;
+    padding-right: 0%;
+    font-weight: 400;
+    font-size: 25px
+}
+h2{
+    text-align: right;
+    color: white;
+    float: right
+}
+#header {
+    width:100%;
+    background-color: #9a7b4f;
+    height:10%;
+    text-align: center;
+    color:white;
+}
+
+#viewDiv2 {
+    float: left;
+    right: 0;
+    padding: 0.5%;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+#viewDiv3 {
+    float: top;
+    right: 0;
+    padding: 0.5%;
+    margin: 0;
+    height: 47.5%;
+    width: 100%;
+}
+
+#viewDiv4 {
+    float: bottom;
+    right: 0;
+    padding: 0.5%;
+    margin: 0;
+    height: 47.5%;
+    width: 100%;
+}
+
+#viewDiv5 {
+    float: right;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 24%;
+}
+
+#extentDiv{
+    border: 2px solid burlywood;
+    position:absolute;
+    z-index: 2;
+}
+
+    </style>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.21/esri/css/main.css">
+    <script src="https://js.arcgis.com/4.21"></script>
+    <script>
+        require([
+            "esri/config",
+            "esri/Map",
+            "esri/Basemap",
+            "esri/views/MapView",
+            "esri/layers/FeatureLayer",
+            "esri/layers/VectorTileLayer",
+            "esri/widgets/Swipe",
+            "esri/widgets/LayerList",
+            "esri/widgets/Feature",
+            "dojo/domReady!",
+            
+
+        ], function(Map, Map, Basemap, MapView, FeatureLayer, VectorTileLayer, Swipe, LayerList, Feature,)
+            {
+        
+        var myMap = new Map(
+            
+        
+);
+
+
+
+var myMap2 = new Map(
+    
+
+   
+);
+
+var myView2 = new MapView({
+    container: "viewDiv2",
+    map: myMap2,
+    center: [18.7065374873658254, 50.71772324999999],
+    zoom: 3,
+    constraints: {
+        rotationEnabled: false
+    }
+});
+
+           
+
+var myMap3 = new Map(
+    
+);
+
+var myView3 = new MapView({
+    container: "viewDiv3",
+    map: myMap3,
+    center: [18.7065374873658254, 50.71772324999999],
+    zoom:2,
+    constraints: {
+        rotationEnabled: false
+    }
+});
+
+var myMap4 = new Map(
+    
+);
+
+var myView4 = new MapView({
+    container: "viewDiv4",
+    map: myMap4,
+    center: [18.7065374873658254, 50.71772324999999],
+    zoom: 2,
+});
+
+
+
+
+var myBasemap1 = new VectorTileLayer({
+    url: "https://arts-sciences.maps.arcgis.com/sharing/rest/content/items/a42e0c2348e147148258471166c59127/resources/styles/root.json?f=pjson"
+});
+myBasemap1.listMode="hide";
+myMap.add(myBasemap1);
+
+var myBasemap2 = new VectorTileLayer({
+    url: "https://arts-sciences.maps.arcgis.com/sharing/rest/content/items/a42e0c2348e147148258471166c59127/resources/styles/root.json?f=pjson"
+});
+myBasemap2.listMode="hide";
+myMap2.add(myBasemap2);
+
+var myBasemap3 = new VectorTileLayer({
+    url: "https://arts-sciences.maps.arcgis.com/sharing/rest/content/items/a42e0c2348e147148258471166c59127/resources/styles/root.json?f=pjson"
+});
+myBasemap3.listMode="hide";
+myMap3.add(myBasemap3);
+
+var myBasemap4 = new VectorTileLayer({
+    url: "https://arts-sciences.maps.arcgis.com/sharing/rest/content/items/a42e0c2348e147148258471166c59127/resources/styles/root.json?f=pjson"
+});
+myBasemap4.listMode="hide";
+myMap4.add(myBasemap4);
+
+var migfour = new FeatureLayer ({
+    portalItem:{
+        id:"9e17e6a8c9ca4d6faf2b64ae3b28462b"
+    }
+});
+
+myMap2.add(migfour);
+
+var migteen = new FeatureLayer ({
+    portalItem:{
+        id:"a3b169103d2849cabcc3b633e3859255"
+    }
+});
+myMap2.add(migteen);
+
+
+var income = new FeatureLayer ({
+    portalItem:{
+        id:"0eabc272eee54c8292999ee3ba74d039"
+    }
+});
+myMap3.add(income);
+
+var index = new FeatureLayer ({
+    portalItem:{
+        id:"c66859894187485cb711e8491f8dd26e"
+    }
+});
+myMap4.add(index);
+
+
+
+const mySwipe = new Swipe({
+                    leadingLayers: [migfour],
+                    trailingLayers: [migteen],
+                    position: 50,
+                    view: myView2
+                });
+
+                myView2.ui.add(mySwipe);
+
+        const layerList = new LayerList({
+                    view: myView2,
+                    container:"viewDiv5",
+                    listItemCreatedFunction: function(event){
+                        const item = event.item;
+                        if (item.layer.type !="group"){
+                            item.panel = {
+                                content: "legend",
+                                open: true
+                            };
+                        }
+                    }
+                });
+                const layerList1 = new LayerList({
+                    view: myView3,
+                    container:"viewDiv5",
+                    listItemCreatedFunction: function(event){
+                        const item = event.item;
+                        if (item.layer.type !="group"){
+                            item.panel = {
+                                content: "legend",
+                                open: true
+                            };
+                        }
+                    }
+                });
+                const layerList2 = new LayerList({
+                    view: myView4,
+                    container:"viewDiv5",
+                    listItemCreatedFunction: function(event){
+                        const item = event.item;
+                        if (item.layer.type !="group"){
+                            item.panel = {
+                                content: "legend",
+                                open: true
+                            };
+                        }
+                    }
+                });
+
+               
+                
+            });
+            
+           
+                
+    </script>
+</head>
+<body>
+    <div id = "header"; style="display: table; height: 15px; overflow: hidden;"><h1 style="vertical-align: middle">Polish Migration Within the European Union</h1></div>
+    <div id = "viewDiv">
+        <div id = "viewDivMain">
+            <div id = "titleDiv3">Migration 2004</div>
+            <div id = "titleDiv">Migration 2014</div>
+            <div id= "viewDiv2"></div>
+            </div>
+                <div id = "viewDivMaps">
+                    <div id = "titleDiv1">Average Income (Euro)</div>
+                    <div id= "viewDiv3"></div>
+                    <div id = "titleDiv2">Cost of Living Index</div>
+                    <div id= "viewDiv4"></div>
+                </div>
+            
+                <div id= "viewDiv5"></div>
+                
+    </div>
+    
+    
+
+
+</body>
+</html>
+  
